@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>EPR库存管理系统</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/colorpicker.css" />
+        <link rel="stylesheet" href="css/datepicker.css" />
+		<link rel="stylesheet" href="css/uniform.css" />
+		<link rel="stylesheet" href="css/select2.css" />		
+		<link rel="stylesheet" href="css/unicorn.main.css" />
+		<link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<body>
+		
+		
+		<div id="header">
+			<h1><a href="./dashboard.html">库存管理</a></h1>		
+		</div>
+		
+		<div id="user-nav" class="navbar navbar-inverse">
+            <ul class="nav btn-group">
+             
+                <li class="btn btn-inverse"><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+            </ul>
+        </div>
+            
+		<div id="sidebar">
+			<a href="#" class="visible-phone"><i class="icon icon-th-list"></i>成品出库</a>
+			<ul>
+				<li class="submenu">
+					<a href="#"><i class="icon icon-th-list"></i> <span>销售管理</span> <span class="label">2</span></a>
+					<ul>
+						<li><a href="DepotOut.html">成品出库</a></li>
+						<li><a href="PABill.html">PA清单</a></li>
+					</ul>
+				</li>
+				<li class="submenu ">
+					<a href="#"><i class="icon icon-th"></i> <span>库存盘点</span> <span class="label">2</span></a>
+					<ul>
+						<li><a href="Balance.html">盘盈盘亏</a></li>
+                        <li><a href="Check.html">库存盘点</a></li>
+					</ul>
+				</li>
+                 <li class="submenu   active open">
+					<a href="index.html"><i class="icon icon-th"></i> <span>库存管理</span> <span class="label">4</span></a>
+					<ul>
+						<li><a href="Cancellation.html">核销</a></li>
+                        <li><a href="ReworkProductIn.html">返修品入库</a></li>
+                        <li><a href="ReworkProductOut.html">返修品出库</a></li>
+                        <li   class="active"><a href="WasteSingle.html">废品单</a></li>
+					</ul>
+				</li>
+			</ul>
+		
+		</div>
+		
+		<div id="style-switcher">
+			<i class="icon-arrow-left icon-white"></i>
+			<span>Style:</span>
+			<a href="#grey" style="background-color: #555555;border-color: #aaaaaa;"></a>
+			<a href="#blue" style="background-color: #2D2F57;"></a>
+			<a href="#red" style="background-color: #673232;"></a>
+		</div>
+		
+		<div id="content">
+			<div id="content-header">
+				<h1>废品单</h1>
+			
+			</div>
+			<div id="breadcrumb">
+				<a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"> </i> 首页</a>
+				<a href="#" class="tip-bottom">库存管理</a>
+				<a href="#" class="current">废品单</a> 
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box" style="height:550px;">
+							<div class="widget-title">
+								<span class="icon">
+									<i class="icon-align-justify"></i>									
+								</span>
+                                <span> <a href="index.html"><h5>首页</h5> </a> </span>
+                                <span style="float:right"> <button  data-toggle="modal" data-target="#addmyModal">添加</button> </span>
+				               
+							</div>
+							<div class="widget-content nopadding" style="width:1089px; height:339px">
+                            
+                            	<div class="table-responsive">
+                                    <!--显示报废单信息-->
+                                    <form>
+                                    <table class="table table-bordered" style="border:1px">
+                                         <th>
+                                            <td><h5>选择</h5></td>
+                                         	<td><h5>厂家</h5></td>
+                                            <td><h5>零件名称</h5></td>
+                                            <td><h5>零件号</h5></td>
+                                            <td><h5>报废部门</h5></td>
+                                            <td><h5>审核</h5></td>
+                                            <td><h5>当前日期 &nbsp;&nbsp; &nbsp;&nbsp;</h5></td>
+                                            <td><h5>库类型</h5></td>
+                                            <td><h5>单价</h5></td>
+                                            <td><h5>报废人员</h5></td>
+                                            <td><h5>操作</h5></td>
+                                         </th>
+                                         <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>海尔</td>
+                                            <td>液压器</td>
+                                            <td>10001</td>
+                                            <td>审核部</td>
+                                            <td>同意</td>
+                                            <td>2014/07/06</td>
+                                            <td>电气设施</td>
+                                            <td>8843.23</td>
+                                            <td>胡人杰</td>      
+                                            <td>
+                                            	<button  data-toggle="modal" data-target="#myModal">修改</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                          <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>长虹</td>
+                                            <td>显像管</td>
+                                            <td>10002</td>
+                                            <td>审核部</td>
+                                            <td>同意</td>
+                                            <td>2014/09/16</td>
+                                            <td>电气设施</td>
+                                            <td>8453.23</td>
+                                            <td>胡亮</td>      
+                                            <td>
+                                            	<button  data-toggle="modal" data-target="#myModal">修改</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                    </table>
+                                
+                                </div>
+                                <!--废品单中选择产品-->
+                                  <br />
+                                 <span style="margin-left:20px"> <button>选择报废产品</button> </span>
+                                <div class="table-responsive">
+                        
+                                    <table class="table table-bordered" style="border:1px">
+                                         <th>
+                                            
+                                         	<td><h5>选择</h5></td>
+                                            <td><h5>零件名称</h5></td>
+                                            <td><h5>零件号</h5></td>
+                                            <td><h5>操作</h5></td>
+                                         </th>
+                                          <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>液压器</td>
+                                            <td>10001</td>
+                                            <td>
+                                                <button  data-toggle="modal" data-target="#seemyModal">查看</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                          <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>显像管</td>
+                                            <td>10002</td>
+                                            <td>
+                                                <button  data-toggle="modal" data-target="#seemyModal">查看</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                    </table>
+                                
+                                </div>
+                                <!--检查报废人员-->
+                              
+                                <br />
+                                 <span style="margin-left:20px"> <button>选择报废人员</button> </span>
+                                <div class="table-responsive">
+                        
+                                    <table class="table table-bordered" style="border:1px">
+                                         <th>
+                                            
+                                         	<td><h5>选择</h5></td>
+                                            <td><h5>报废人员</h5></td>
+                                            <td><h5>操作</h5></td>
+                                         </th>
+                                         <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>胡人杰</td>
+                                            <td>
+                                                <button  data-toggle="modal" data-target="#seemyModal">查看</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                          <tr>
+                                            <td></td>
+                                            <td> 
+                                              <label class="checkbox-inline">
+  										        <input type="checkbox" id="inlineCheckbox1" value="option1" /> 
+										      </label></td>	
+                                            <td>胡亮</td>
+                                            <td>
+                                                <button  data-toggle="modal" data-target="#seemyModal">查看</button>
+                                                <button>删除</button>
+                                            </td>
+                                         </tr>
+                                    </table>
+                                    </form>
+                                
+                                </div>
+                                
+                                
+							</div>
+						</div>						
+					</div>
+				</div>
+				
+			</div>
+		</div>  
+        <div class="row-fluid">
+					<div id="footer" class="span12">
+						2014 &copy; ERP库存管理系统 by 山东理工大学
+					</div>
+				</div> 
+                
+
+
+<!-- 修改 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+        <h4 class="modal-title" id="myModalLabel">废品单修改</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <center>
+          <table>
+              <tr><td>厂家&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件名称&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件号&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废部门&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>审核&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>当前日期&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>库类型&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>单价&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废人员&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+          </table>
+          </center>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 添加 -->
+<div class="modal fade" id="addmyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+        <h4 class="modal-title" id="myModalLabel">废品单添加</h4>
+      </div>
+      <div class="modal-body">
+      
+      <form>
+          <center>
+          <table>
+              <tr><td>厂家&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件名称&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件号&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废部门&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>审核&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>当前日期&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>库类型&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>单价&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废人员&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+          </table>
+          </center>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--查看-->
+<div class="modal fade" id="seemyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+        <h4 class="modal-title" id="myModalLabel">废品单查看</h4>
+      </div>
+      <div class="modal-body">
+      
+      <form>
+          <center>
+          <table>
+              <tr><td>厂家&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件名称&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>零件号&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废部门&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>审核&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>当前日期&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>库类型&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>单价&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+              <tr><td>报废人员&nbsp;&nbsp;</td><td><input type="text" /></td></tr>
+          </table>
+          </center>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery.ui.custom.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/bootstrap-colorpicker.js"></script>
+            <script src="js/bootstrap-datepicker.js"></script>
+            <script src="js/jquery.uniform.js"></script>
+            <script src="js/select2.min.js"></script>
+            <script src="js/unicorn.js"></script>
+            <script src="js/unicorn.form_common.js"></script>
+	</body>
+</html>
